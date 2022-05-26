@@ -16,7 +16,7 @@ RUN clang -fsanitize=fuzzer fuzz.c str.c
 
 ## Package Stage
 FROM --platform=linux/amd64 ubuntu:20.04
-COPY --from=builder /gif-h/a.out /fuzz-str
+COPY --from=builder /str/a.out /fuzz-str
 
 ## Make debug corpus
 RUN mkdir /corpus && echo "seed" > /corpus/seed

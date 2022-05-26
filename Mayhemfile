@@ -1,0 +1,7 @@
+image: ghcr.io/capuanob/str-fuzz:latest
+project: str
+target: str-fuzz
+
+cmds:
+  - cmd: /fuzz-str -close_fd_mask=2
+    libfuzzer: true
